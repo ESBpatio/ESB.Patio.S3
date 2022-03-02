@@ -82,6 +82,7 @@ namespace ESB.Patio.S3
                 {
                     CompletePeeklock(logger, messageSource, message.Id, MessageHandlingError.RejectedMessage, ex.Message);
                 }
+                CompletePeeklock(logger, messageSource, message.Id);
             }
         }
         public void Cleanup()
