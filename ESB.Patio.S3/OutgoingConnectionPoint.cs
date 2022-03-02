@@ -35,12 +35,12 @@ namespace ESB.Patio.S3
 
                 throw new Exception("Не удалось разобрать строку настроек! Ошибка : " + ex.Message);
             }
-            debugMode = JSONUtils.BoolValue(jObject, "debugMode");
-            timeOut = JSONUtils.IntValue(jObject, "timeOut", 5);
-            bucketName = JSONUtils.StringValue(jObject, "bucketName");
-            serviceURL = JSONUtils.StringValue(jObject, "serviceURL");
-            accessKey = JSONUtils.StringValue(jObject, "accessKey");
-            secretKey = JSONUtils.StringValue(jObject, "secretKey");
+            debugMode = JsonUtils.BoolValue(jObject, "debugMode");
+            timeOut = JsonUtils.IntValue(jObject, "timeOut", 5);
+            bucketName = JsonUtils.StringValue(jObject, "bucketName");
+            serviceURL = JsonUtils.StringValue(jObject, "serviceURL");
+            accessKey = JsonUtils.StringValue(jObject, "accessKey");
+            secretKey = JsonUtils.StringValue(jObject, "secretKey");
         }
         public void Run(IMessageSource messageSource, IMessageReplyHandler replyHandler, CancellationToken ct)
         {
