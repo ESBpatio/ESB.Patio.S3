@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
+using System.Reflection;
 
 namespace ESB.Patio.S3
 {
